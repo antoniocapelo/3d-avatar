@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react"
-
+import SEO from "../components/seo"
 import Layout from "../components/layout"
-
 import sceneFile from "../assets/scene.json"
 import useMousePosition from "../hooks/useMousePosition"
 
@@ -132,6 +131,8 @@ const Guy = () => {
 
 const IndexPage = () => (
   <Layout>
+    <SEO title="Yo!" keywords={[`threejs`, `webgl`, `front-end developer`]} />
+
     <Guy />
   </Layout>
 )
