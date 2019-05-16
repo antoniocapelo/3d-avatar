@@ -22,8 +22,8 @@ const Guy = () => {
   const scene = useRef()
   const avatar = useRef()
   const { mousePosition: [mouseX, mouseY], hasMoved} = useMousePosition()
-  const totalWidth = window ? window.innerWidth : 0
-  const totalHeight = window ? window.innerHeight : 0
+  const totalWidth = typeof window !== 'undefined' ? window.innerWidth : 0
+  const totalHeight = typeof window !== 'undefined' ? window.innerHeight : 0
   const normalize = (value, t) => {
     if (ready) {
       return (value * 2 - t) / t
